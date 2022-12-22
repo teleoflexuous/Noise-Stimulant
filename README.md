@@ -1,6 +1,6 @@
 # Stimulant Noise
 
-<img height="50%" src="img_1.png" width="50%"/> <img height="50%" src="img_2.png" width="50%"/>
+<img height="50%" src="img_1.png" width="40%"/> <img height="50%" src="img_2.png" width="40%"/>
 
 ### Purpose
 The program provides sounds (noise, music, other) which should load your attention. For example, if you can't focus on something because it's too easy, or you are trying to start, and it didn't get interesting/challenging yet.
