@@ -1,0 +1,37 @@
+{
+    "mute": false,
+    "name": "Human_High",
+    "sounds": {
+        "drum_mantra.ogg": {
+            "mute": false,
+            "path": "sounds\\drum_mantra.ogg",
+            "volume": 18.055555555555557
+        },
+        "mantra_drum.ogg": {
+            "mute": false,
+            "path": "sounds\\mantra_drum.ogg",
+            "volume": 11.111111111111107
+        },
+        "pagoda.ogg": {
+            "mute": false,
+            "path": "sounds\\pagoda.ogg",
+            "volume": 19.444444444444446
+        },
+        "plates.ogg": {
+            "mute": false,
+            "path": "sounds\\plates.ogg",
+            "volume": 9.722222222222223
+        },
+        "static.ogg": {
+            "mute": false,
+            "path": "sounds\\static.ogg",
+            "volume": 9.722222222222221
+        },
+        "white_noise.ogg": {
+            "mute": false,
+            "path": "sounds\\white_noise.ogg",
+            "volume": 10.416666666666668
+        }
+    },
+    "volume": 50
+}

@@ -1,0 +1,5 @@
+pygame~=2.1.2
+pynput~=1.7.6
+watchdog~=2.1.9
+future~=0.18.2
+flet~=0.2
