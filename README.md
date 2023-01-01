@@ -23,7 +23,7 @@ If that fails:
 
 If your system screams about it logging your keyboard, that's because it does. You have to let it do so, it's a core function. Program is open sourced in part in order to assure you of it's safety.
 
-Keep in mind, if you're running StimulantNoise.exe, presets and default sounds are located in dist/StimulantNoise folder.
+Keep in mind, if you're running StimulantNoise.exe (as opposed to a Python instruction below), presets and default sounds are located in dist/StimulantNoise folder.
 
 #### If you know what you're doing
 StimulantNoise.py would be the file you want to start with, and you can delete build and dist folders.
