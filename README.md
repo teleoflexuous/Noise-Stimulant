@@ -16,6 +16,8 @@ It is meant as a generic performance booster, but it can be especially useful to
 
 1. Top right corner of this page, click green button <>Code and download ZIP
 2. Run StimulantNoise.
+If that fails:
+3. Open dist/StimulantNoise and run StimulantNoise.exe that's in there.
 
 If your system screams about it logging your keyboard, that's because it does. You have to let it do so, it's a core function. Program is open sourced in part in order to assure you of it's safety.
 
