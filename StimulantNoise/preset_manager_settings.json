@@ -1,0 +1,37 @@
+{
+    "current_preset": "Brown Noise",
+    "presets": {
+        "Brown Noise": "presets\\Brown Noise.json",
+        "Forest Rain 120": "presets\\Forest Rain 120.json",
+        "Forest Rain 150": "presets\\Forest Rain 150.json",
+        "Forest Rain 180": "presets\\Forest Rain 180.json",
+        "Human High": "presets\\Human High.json",
+        "Human Low": "presets\\Human Low.json",
+        "Human Medium": "presets\\Human Medium.json",
+        "Inudstrial High": "presets\\Inudstrial High.json",
+        "Inudstrial Low": "presets\\Inudstrial Low.json",
+        "Inudstrial Medium": "presets\\Inudstrial Medium.json",
+        "Nature High": "presets\\Nature High.json",
+        "Nature Low": "presets\\Nature Low.json",
+        "Nature Medium": "presets\\Nature Medium.json",
+        "Silence": "presets\\Silence.json",
+        "White Noise": "presets\\White Noise.json"
+    },
+    "presets_order": [
+		"Silence",
+		"White Noise"
+        "Brown Noise",
+        "Nature Low",
+		"Nature Medium"
+		"Nature High",
+        "Inudstrial Low",
+        "Inudstrial Medium",
+        "Inudstrial High",
+        "Human Low",
+        "Human Medium",
+		"Human High",
+		"Forest Rain 120",
+        "Forest Rain 150",
+        "Forest Rain 180",
+    ]
+}

@@ -1,0 +1,5 @@
+{
+    "mute": "{<Key.left: <37>>} + None",
+    "next": "{<Key.up: <38>>} + None",
+    "previous": "{<Key.down: <40>>} + None"
+}
