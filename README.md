@@ -20,7 +20,7 @@ It is meant as a generic performance booster, but it can be especially useful to
 If your system screams about it logging your keyboard, that's because it does. You have to let it do so, it's a core function. Program is open sourced in part in order to assure you of it's safety.
 
 #### If you know what you're doing
-StimulantNoise.py would be the file you want to start with, and you can delete build and dist folders.
+StimulantNoise.py would be the file you want to start with.
 
 #### If you kind of know what you're doing, but you're not on Windows
 1. Top right corner of this page, click green button <>Code and download ZIP
