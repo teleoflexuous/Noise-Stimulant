@@ -1,4 +1,4 @@
-from .settings import PresetsManagerSettings, PresetSettings
+from .settings.preset import PresetsManagerSettings, PresetSettings
 from .audio import Audio
 
 import timeit
@@ -7,7 +7,13 @@ import timeit
 class Preset:
     def __init__(self, preset_settings: PresetSettings):
         self.preset_settings = preset_settings
+        self.preset_settings.settings = self.preset_settings.load_or_create()
         settings = preset_settings.settings
+        if settings is None:
+            self.name = "None"
+            settings = preset_settings.create()
+            preset_settings.settings = settings
+            preset_settings.save()
         self.name = settings['name']
         self.volume = settings['volume']
         self.sounds = settings['sounds']
@@ -63,6 +69,7 @@ class Preset:
 class PresetsManager:
     def __init__(self, preset_manage_settings: PresetsManagerSettings):
         self.presets_manager_settings = preset_manage_settings
+
         self.settings = preset_manage_settings.settings
         self.presets, self.presets_order, self.current_preset = self.load_presets()
         self.audio = Audio(self.current_preset)

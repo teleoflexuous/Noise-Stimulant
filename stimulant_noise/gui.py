@@ -1,7 +1,49 @@
+from typing import Any, Optional, Union
 import flet as ft
+from flet.alignment import Alignment
+from flet.border import Border
+from flet.control import Control, OptionalNumber
+from flet.gradients import Gradient
+from flet.ref import Ref
+from flet.types import AnimationValue, BlendMode, BorderRadiusValue, BoxShape, ClipBehavior, ImageFit, ImageRepeat, MarginValue, OffsetValue, PaddingValue, ResponsiveNumber, RotateValue, ScaleValue
 
 from .hotkeys import Hotkeys
 from .preset import PresetsManager
+
+
+class SideBar:
+    def __init__(self, presets_manager: PresetsManager) -> None:
+        self.presets_manager: PresetsManager = presets_manager
+
+    def build(self):
+
+        presets = self.presets_manager.presets_manager_settings.groups.groups[self.presets_manager.presets_manager_settings.groups.current_group]
+
+        preset_buttons = []
+
+        for preset_name in presets:
+            preset_button = ft.ElevatedButton(text=preset_name, on_click=lambda _: self.presets_manager.set_current_preset(preset_name))
+            preset_buttons.append(preset_button)
+
+        next_preset_button = ft.FilledTonalButton(text='Down', icon=ft.icons.KEYBOARD_ARROW_DOWN_ROUNDED,
+                                                  style=ft.ButtonStyle(shape=ft.RoundedRectangleBorder(radius=10)),
+                                                  on_click=self.next_preset, width=100)
+        previous_preset_button = ft.FilledTonalButton(text='Up', icon=ft.icons.KEYBOARD_ARROW_UP_ROUNDED,
+                                                      style=ft.ButtonStyle(shape=ft.RoundedRectangleBorder(radius=10)),
+                                                      on_click=self.previous_preset, width=100)
+
+        container = ft.Container(ft.Column([
+            ft.Text(self.presets_manager.current_preset.name),
+            next_preset_button,
+            *preset_buttons,
+            previous_preset_button,
+            ft.FilledTonalButton(text="Lower", icon=ft.icons.KEYBOARD_ARROW_DOWN_ROUNDED),
+            ft.FilledTonalButton(text="Higher", icon=ft.icons.KEYBOARD_ARROW_UP_ROUNDED),
+            ft.FilledTonalButton(text="Add new preset", icon=ft.icons.PLUS_ONE),
+
+        ]))
+
+        return container
 
 
 class GUI:
@@ -100,35 +142,9 @@ class GUI:
         return left_column
 
     def build_right_column(self):
-        dark_mode_toggle = ft.Checkbox(label='Dark mode', value=self.page.theme_mode == "dark",
-                                       on_change=lambda e: self.set_dark_mode(e))
-        presets_text = ft.Text('Presets', size=20, weight='w600')
-        add_preset_button = ft.FloatingActionButton(text='Add preset',
-                                                    icon=ft.icons.ADD_CIRCLE,
-                                                    on_click=lambda _: self.display_new_preset_dialog(),
-                                                    height=30,
-                                                    shape=ft.RoundedRectangleBorder(radius=10))
-        change_hotkeys_button = ft.FloatingActionButton(text='Change hotkeys',
-                                                        icon=ft.icons.SETTINGS,
-                                                        on_click=lambda _: self.display_change_hotkeys_dialog(),
-                                                        height=30,
-                                                        shape=ft.RoundedRectangleBorder(radius=10))
-        next_preset_button = ft.FilledTonalButton(text='Down', icon=ft.icons.KEYBOARD_ARROW_DOWN_ROUNDED,
-                                                  style=ft.ButtonStyle(shape=ft.RoundedRectangleBorder(radius=10)),
-                                                  on_click=self.next_preset, width=100)
-        previous_preset_button = ft.FilledTonalButton(text='Up', icon=ft.icons.KEYBOARD_ARROW_UP_ROUNDED,
-                                                      style=ft.ButtonStyle(shape=ft.RoundedRectangleBorder(radius=10)),
-                                                      on_click=self.previous_preset, width=100)
-        preset_controls_row = ft.Row(controls=[previous_preset_button, next_preset_button], spacing=10)
-        presets_control_container = ft.Container(content=preset_controls_row, padding=3, border_radius=10)
-        settings_control_container = ft.Container(content=ft.Column(controls=[add_preset_button,
-                                                                              change_hotkeys_button]),
-                                                  padding=10, border_radius=10)
-
-        right_column = ft.Column(controls=[dark_mode_toggle, presets_text, self.build_presets_column(),
-                                           presets_control_container, settings_control_container],
-                                 spacing=10)
-        return right_column
+        self.presets_manager.load_presets()
+        
+        return SideBar(self.presets_manager).build()
 
     def set_dark_mode(self, e):
         self.page.theme_mode = self.page.theme_mode == "dark" and "light" or "dark"
