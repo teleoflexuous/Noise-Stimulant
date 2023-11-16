@@ -2,10 +2,9 @@ import pynput
 
 from .preset import PresetsManager
 from .pressed_keys import PressedKeys
-from .settings import HotkeySettings
+from .settings.hotkeys import HotkeySettings
 
 import queue
-
 
 
 class Hotkeys:

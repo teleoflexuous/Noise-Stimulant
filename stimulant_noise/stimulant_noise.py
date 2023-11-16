@@ -5,7 +5,8 @@ from .hotkeys import Hotkeys
 from .gui import GUI
 from .preset import PresetsManager
 
-from .settings import HotkeySettings, PresetsManagerSettings, InternalSettings
+from .settings.hotkeys import HotkeySettings
+from .settings.preset import PresetsManagerSettings, InternalSettings
 
 
 class StimulantNoiseThread(threading.Thread):
@@ -41,6 +42,10 @@ class StimulantNoise:
         self.internal_settings = InternalSettings(settings_file_location="internal_settings.json")
         self.presets_manager_settings = PresetsManagerSettings(settings_file_location="preset_manager_settings.json",
                                                                internal_settings=self.internal_settings)
+        settings = self.presets_manager_settings.load_or_create()
+        self.presets_manager_settings.settings = settings
+        self.presets_manager_settings.save()
+
         self.hotkey_settings = HotkeySettings(settings_file_location="hotkey_settings.json")
 
         self.presets_manager = PresetsManager(self.presets_manager_settings)
