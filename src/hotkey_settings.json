@@ -1,0 +1,5 @@
+{
+    "mute": "{<Key.ctrl_l: <162>>, <Key.shift: <160>>} + '\\r'",
+    "next": "{<Key.ctrl_l: <162>>, <Key.shift: <160>>} + '\\x0e'",
+    "previous": "{<Key.ctrl_l: <162>>, <Key.shift: <160>>} + '\\x10'"
+}

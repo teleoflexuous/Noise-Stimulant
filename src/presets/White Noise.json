@@ -1,0 +1,12 @@
+{
+    "mute": false,
+    "name": "White Noise",
+    "sounds": {
+        "white_noise.ogg": {
+            "mute": false,
+            "path": "sounds\\white_noise.ogg",
+            "volume": 50
+        }
+    },
+    "volume": 50
+}

@@ -1,0 +1,17 @@
+{
+    "mute": false,
+    "name": "Human Medium",
+    "sounds": {
+        "mantra_drum.ogg": {
+            "mute": false,
+            "path": "sounds\\mantra_drum.ogg",
+            "volume": 15.277777777777823
+        },
+        "pagoda.ogg": {
+            "mute": false,
+            "path": "sounds\\pagoda.ogg",
+            "volume": 25.0
+        }
+    },
+    "volume": 50
+}
