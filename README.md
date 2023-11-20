@@ -1,6 +1,6 @@
 # Stimulant Noise
 
-<img height="50%" src="img_1.png" width="40%"/> <img height="50%" src="img_2.png" width="40%"/>
+<img height="50%" src="docs/img_1.png" width="40%"/> <img height="50%" src="docs/img_2.png" width="40%"/>
 
 ### Purpose
 The program provides sounds (noise, music, other) which should load your attention. For example, if you can't focus on something because it's too easy, or you are trying to start, and it didn't get interesting/challenging yet.
@@ -64,7 +64,7 @@ If you're used to having podcasts in the background, you can do the same thing, 
 #### Extended lore
 
 [Yerkes–Dodson law](https://en.wikipedia.org/wiki/Yerkes%E2%80%93Dodson_law) is one of better replicating and established pieces of research in cognitive psychology.
-![img.png](img.png)
+![img.png](docs/img.png)
 
 Much has been written about [Flow](https://en.wikipedia.org/wiki/Flow_(psychology)) and [Deep work](https://en.wikipedia.org/wiki/Deep_work). Tl;DR is, you should maintain top of that performance hill as much as possible. If work gets too hard, lower additional load (noise, distractions, etc.) to maintain performance. If work gets too easy, increase additional load to maintain performance.
 
