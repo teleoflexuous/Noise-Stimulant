@@ -1,0 +1,17 @@
+{
+    "mute": false,
+    "name": "Human Low",
+    "sounds": {
+        "drum_mantra.ogg": {
+            "mute": false,
+            "path": "sounds\\drum_mantra.ogg",
+            "volume": 13.194444444444539
+        },
+        "pagoda.ogg": {
+            "mute": false,
+            "path": "sounds\\pagoda.ogg",
+            "volume": 12.5
+        }
+    },
+    "volume": 50
+}

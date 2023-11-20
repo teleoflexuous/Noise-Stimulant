@@ -1,0 +1,17 @@
+{
+    "mute": false,
+    "name": "Inudstrial Medium",
+    "sounds": {
+        "fans.ogg": {
+            "mute": false,
+            "path": "sounds\\fans.ogg",
+            "volume": 13.88888888888889
+        },
+        "hydraulic.ogg": {
+            "mute": false,
+            "path": "sounds\\hydraulic.ogg",
+            "volume": 18.75
+        }
+    },
+    "volume": 50
+}

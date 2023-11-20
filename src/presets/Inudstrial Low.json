@@ -1,0 +1,17 @@
+{
+    "mute": false,
+    "name": "Inudstrial Low",
+    "sounds": {
+        "fans.ogg": {
+            "mute": false,
+            "path": "sounds\\fans.ogg",
+            "volume": 10.416666666666668
+        },
+        "noise.ogg": {
+            "mute": false,
+            "path": "sounds\\noise.ogg",
+            "volume": 12.5
+        }
+    },
+    "volume": 50
+}

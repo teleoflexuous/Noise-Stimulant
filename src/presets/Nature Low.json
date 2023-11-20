@@ -1,0 +1,17 @@
+{
+    "mute": false,
+    "name": "Nature Low",
+    "sounds": {
+        "forest.ogg": {
+            "mute": false,
+            "path": "sounds\\forest.ogg",
+            "volume": 24.305555555555745
+        },
+        "rain.ogg": {
+            "mute": false,
+            "path": "sounds\\rain.ogg",
+            "volume": 23.61111111111111
+        }
+    },
+    "volume": 50
+}
